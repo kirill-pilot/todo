@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Menu } from '../components/common/Menu';
+import { Layout } from '../components/layouts/default';
 import { TODOS_PAGE, ADD_PAGE } from './paths';
 
 function Router() {
@@ -7,12 +7,14 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route path={ADD_PAGE}>
-          <Menu />
-          add
+          <Layout>
+            add
+          </Layout>
         </Route>
         <Route path={TODOS_PAGE}>
-          <Menu />
-          view
+          <Layout>
+            view
+          </Layout>
         </Route>
       </Switch>
     </BrowserRouter>

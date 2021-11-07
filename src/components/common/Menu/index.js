@@ -1,1 +1,1 @@
-export { default as Menu } from './view';
+export { default as Menu } from './view.jsx';
