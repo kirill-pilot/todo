@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Layout } from '../components/layouts/default';
+import { AddPage } from '../components/pages/addTodo';
 import { TODOS_PAGE, ADD_PAGE } from './paths';
 
 function Router() {
@@ -7,14 +7,10 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route path={ADD_PAGE}>
-          <Layout>
-            add
-          </Layout>
+          <AddPage />
         </Route>
         <Route path={TODOS_PAGE}>
-          <Layout>
-            view
-          </Layout>
+          view
         </Route>
       </Switch>
     </BrowserRouter>
