@@ -1,0 +1,39 @@
+.add-page {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 50px;
+
+  .add-page__input-todo {
+    padding-left: 10px;
+    height: 100%;
+    width: 300px;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid black;
+  }
+
+  .add-page__button-add {
+    width: 60px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: rgb(21, 197, 21);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(20, 173, 20);
+    }
+
+    &:disabled {
+      background-color: honeydew;
+      border: 1px solid grey;
+      color: grey;
+      cursor: auto;
+    }
+  }
+}
