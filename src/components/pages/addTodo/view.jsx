@@ -16,12 +16,12 @@ function AddPage() {
   }, [dispatch, inputValue]);
 
   return (
-    <div>
-      <Layout>
+    <Layout>
+      <main>
         <input type="text" value={inputValue} onChange={handelChangeInput} />
         <button onClick={handleClick}>Add</button>
-      </Layout>
-    </div>
+      </main>
+    </Layout>
   );
 }
 

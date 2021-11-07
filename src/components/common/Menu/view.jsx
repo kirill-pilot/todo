@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ADD_PAGE, TODOS_PAGE } from '../../../router/paths';
+import { ADD_TODO_PAGE, TODOS_PAGE } from '../../../router/paths';
 
 const PAGES = [
-  { title: 'Add Todo', path: ADD_PAGE },
+  { title: 'Add Todo', path: ADD_TODO_PAGE },
   { title: 'View Todos', path: TODOS_PAGE },
 ];
 
