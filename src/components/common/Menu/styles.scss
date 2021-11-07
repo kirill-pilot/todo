@@ -1,0 +1,21 @@
+.menu {
+  width: 100vw;
+  height: 100px;
+
+  .menu__navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: rebeccapurple;
+  }
+
+  .menu__navbar-item {
+    font-size: 30px;
+    color: white;
+
+    &:hover {
+      color: yellow;
+    }
+  }
+}

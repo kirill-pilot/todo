@@ -1,0 +1,75 @@
+.todo-item {
+  margin-bottom: 20px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 20px;
+
+  .todo-item__data-wrapper,
+  .todo-item__action-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .todo-item__input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 80%;
+  }
+
+  .todo-item__button-confirm {
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(4, 196, 4);
+
+    &:hover {
+      background-color: rgb(20, 173, 20);
+    }
+
+    &:disabled {
+      color: grey;
+      background: honeydew;
+      border: .5px solid grey;
+      cursor: auto;
+    }
+  }
+
+  .todo-item__button-edit {
+    border-radius: 10px 0 0 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+    &:hover {
+      background-color: rgb(202, 202, 202);
+    }
+
+    &:disabled {
+      color: grey;
+      background: honeydew;
+      cursor: auto;
+    }
+  }
+
+  .todo-item__button-remove {
+    border-radius: 0 10px 10px 0;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(228, 29, 29);
+    color: white;
+
+    &:hover {
+      background-color: rgb(153, 8, 8)
+    }
+  }
+}

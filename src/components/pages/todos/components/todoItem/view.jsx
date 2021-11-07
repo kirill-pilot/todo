@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useCallback, useState } from 'react';
 import { validateLength } from '../../../../../helpers/validators/validateLength';
+import './styles.scss';
 
 const minLengthValue = 1;
 const maxLengthValue = 30;
@@ -28,11 +29,27 @@ function TodoItem(props) {
   }, [onRemove, id]);
 
   return (
-    <li>
-      {isEdit ? <input type="text" value={inputValue} onChange={handelChangeInput} /> : <span>{name}</span>}
-      {isEdit && <button disabled={!isValidValue} onClick={handleClickConfirm}>Confirm</button>}
-      <button disabled={isEdit} onClick={handleClickEdit}>Edit</button>
-      <button onClick={handleRemove}>Remove</button>
+    <li className="todo-item">
+      <div className="todo-item__data-wrapper">
+        {isEdit ? (
+          <input className="todo-item__input" type="text" value={inputValue} onChange={handelChangeInput} />
+        ) : (
+          <span className="todo-item__text">{name}</span>
+        )}
+        {isEdit && (
+          <button
+            className="todo-item__button-confirm"
+            disabled={!isValidValue}
+            onClick={handleClickConfirm}
+          >
+            Confirm
+          </button>
+        )}
+      </div>
+      <div className="todo-item__action-wrapper">
+        <button className="todo-item__button-edit" disabled={isEdit} onClick={handleClickEdit}>Edit</button>
+        <button className="todo-item__button-remove" onClick={handleRemove}>Remove</button>
+      </div>
     </li>
   );
 }

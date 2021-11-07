@@ -3,6 +3,7 @@ import { useCallback } from 'react';
 import { Layout } from '../../layouts/default';
 import TodoItem from './components/todoItem/view';
 import { removeTodo, editTodo } from '../../../redux/actionCreators/todos';
+import './styles.scss';
 
 function TodosPage() {
   const todos = useSelector(state => state.todos);
@@ -17,9 +18,9 @@ function TodosPage() {
 
   return (
     <Layout>
-      <main>
+      <main className="todos-page">
         {todos.length === 0 && <span>Todo list is empty!</span>}
-        <ul>
+        <ul className="todos-page__list-item">
           {todos.map((todo) => (
             <TodoItem
               key={todo.id}
